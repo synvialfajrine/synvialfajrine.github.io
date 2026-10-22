@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synvi Alfajrine Loeba Bistomy | AI Engineer, Healthcare</title>
+<meta name="description" content="AI engineer building LLM agents and RAG systems for healthcare. Biomedical engineering graduate from Universitas Gadjah Mada.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫀</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#13232B; --muted:#52646C;
+  --line:#CFDAD8; --teal:#0E6F63; --pulse:#D2403A;
+  --head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--pulse);outline-offset:3px;border-radius:4px}
+.wrap{max-width:900px;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;gap:1.5rem;flex-wrap:wrap;padding:1.25rem 0;font-weight:500}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--teal);text-decoration:underline;text-underline-offset:4px}
+
+/* Hero: the one memorable element is the ECG trace */
+.hero{padding:4.5rem 0 2.5rem}
+h1{font:800 clamp(2.6rem,8vw,5rem)/1 var(--head);letter-spacing:-.03em;max-width:12ch}
+.role{font:500 clamp(1.15rem,3vw,1.5rem)/1.4 var(--head);color:var(--teal);margin-top:1.25rem}
+.lede{max-width:56ch;margin-top:1rem;color:var(--muted)}
+.ecg{display:block;width:100%;height:90px;margin-top:2.5rem}
+.ecg path{fill:none;stroke:var(--pulse);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.4s ease-out .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.ecg path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+.cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
+.btn{display:inline-block;padding:.7rem 1.3rem;border-radius:999px;font-weight:500;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--teal)}
+.btn.main:hover{background:var(--teal);color:#fff}
+
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.7rem,4vw,2.3rem)/1.15 var(--head);letter-spacing:-.02em;margin-bottom:1.75rem}
+h3{font:700 1.3rem/1.3 var(--head)}
+.meta{color:var(--muted);font-size:.95rem}
+
+/* Timeline: a real chronology, so a rail is meaningful */
+.job{position:relative;padding:0 0 2.25rem 1.75rem;border-left:2px solid var(--line)}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-7px;top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--teal)}
+.job.now::before{background:var(--pulse);border-color:var(--pulse)}
+.job ul{margin:.75rem 0 0;padding-left:1.1rem}
+.job li{margin-bottom:.5rem;max-width:68ch}
+.job li::marker{color:var(--teal)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.4rem}
+.card p{margin-top:.5rem;color:var(--muted)}
+.card.wide{grid-column:1/-1}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+.tags span{font-size:.85rem;padding:.2rem .65rem;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+
+dl.skills{display:grid;gap:1.25rem}
+dl.skills div{display:grid;grid-template-columns:minmax(0,13rem) 1fr;gap:.5rem 2rem;padding-bottom:1.25rem;border-bottom:1px solid var(--line)}
+dt{font:700 1.1rem var(--head)}
+dd{color:var(--muted)}
+@media (max-width:640px){dl.skills div{grid-template-columns:1fr}}
+
+.contact p{max-width:52ch;color:var(--muted);margin-bottom:1.5rem}
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Synvi Alfajrine Loeba Bistomy</h1>
+    <p class="role">AI Engineer building LLM agents for healthcare</p>
+    <p class="lede">I design agentic workflows, RAG pipelines, and computer vision models that hold up in clinical settings. My background is biomedical engineering, so I start from the healthcare problem and work back to the model.</p>
+    <svg class="ecg" viewBox="0 0 900 90" preserveAspectRatio="none" role="img" aria-label="Decorative heartbeat line">
+      <path d="M0 50 H140 L160 50 L175 30 L190 50 H250 L268 56 L290 8 L312 80 L330 50 H470 L490 50 L505 34 L520 50 H580 L598 56 L620 8 L642 80 L660 50 H800 L815 38 L830 50 H900"/>
+    </svg>
+    <div class="cta">
+      <a class="btn main" href="#contact">Get in touch</a>
+      <a class="btn" href="https://github.com/synvialfajrine">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/synvialfajrinelb">LinkedIn</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <article class="job now">
+        <h3>Associate AI Engineer, BitHealth Teknologi Pintar Ltd.</h3>
+        <p class="meta">Yogyakarta, Indonesia. March 2025 to present</p>
+        <ul>
+          <li>Design and ship LLM-powered agents with planning and decision-making, integrated into healthcare chatbots, copilots, and automation workflows through REST APIs.</li>
+          <li>Evaluate agents systematically using feedback loops and user interaction analysis, with safety guardrails and governance to meet clinical-grade standards.</li>
+          <li>Work with engineering, product, and clinical teams to turn healthcare use cases into AI solutions, troubleshoot production failures, and keep documentation current.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Artificial Intelligence Intern, Synapsis Sinergi Digital Ltd.</h3>
+        <p class="meta">Yogyakarta, Indonesia. Nov 2023 to May 2024</p>
+        <ul>
+          <li>Improved face recognition accuracy with FaceNet and built a high-precision PPE detection system with YOLO, in Python.</li>
+          <li>Refined models iteratively against key evaluation metrics and presented results to supervisors and colleagues.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Lab Work Assistant, Biomedical Image Processing Lab, Universitas Gadjah Mada</h3>
+        <p class="meta">March to June 2023</p>
+        <ul>
+          <li>Led two lab sessions for 20 students on image filtering and deep learning segmentation with U-Net, and assessed their work.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Lab Work Assistant, Basic Science Lab, Universitas Gadjah Mada</h3>
+        <p class="meta">Sep to Nov 2022</p>
+        <ul>
+          <li>Supported 40 students across four sessions on AC circuits and linear algebra applications, troubleshooting experiments and grading reports.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="research">
+      <h2>Research and projects</h2>
+      <div class="grid">
+        <article class="card wide">
+          <h3>Bachelor thesis: retinal microaneurysm segmentation</h3>
+          <p class="meta">Jan 2023 to Jan 2024</p>
+          <p>Automatic segmentation and detection of microaneurysms in retinal images with U-Net, to support diabetic retinopathy screening. I compared U-Net, VGG U-Net, and ResNet U-Net, built the architecture blocks in Python and TensorFlow, and applied normalization, resizing, and augmentation to improve generalization.</p>
+          <div class="tags"><span>U-Net</span><span>TensorFlow</span><span>Medical imaging</span><span>Data augmentation</span></div>
+        </article>
+        <article class="card wide">
+          <h3>Capstone: COVID-19 symptom severity classification</h3>
+          <p class="meta">March to Nov 2022</p>
+          <p>A machine learning system that classifies symptom severity for suspected COVID-19 patients to assist medical decisions. I compared Logistic Regression, Random Forest, SVM, KNN, and Gradient Boosting on accuracy, sensitivity, and specificity.</p>
+          <div class="tags"><span>Scikit-learn</span><span>Classification</span><span>Model comparison</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <div><dt>LLM and generative AI</dt><dd>Agentic workflows and multi-step reasoning pipelines with LangChain and LangGraph.</dd></div>
+        <div><dt>RAG</dt><dd>End-to-end RAG pipelines, including embeddings and vector search with Typesense.</dd></div>
+        <div><dt>Machine and deep learning</dt><dd>Computer vision with YOLOv8, FaceNet, and U-Net, and classical ML with Scikit-learn, using Keras, TensorFlow, and PyTorch.</dd></div>
+        <div><dt>Image processing</dt><dd>Segmentation, filtering, and feature extraction with OpenCV.</dd></div>
+        <div><dt>Databases</dt><dd>PostgreSQL, ClickHouse, and MongoDB for structured and unstructured data.</dd></div>
+      </dl>
+    </section>
+
+    <section id="education">
+      <h2>Education and service</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Universitas Gadjah Mada</h3>
+          <p class="meta">Bachelor of Engineering, Biomedical Engineering. Aug 2019 to March 2024. GPA 3.56/4.00</p>
+          <p>Coursework in programming (C), probability and statistics, numerical methods, discrete mathematics, algorithms and data structures, and artificial intelligence.</p>
+        </article>
+        <article class="card">
+          <h3>Karya Salemba Empat Association, UGM</h3>
+          <p class="meta">Scholarship recipient and member, Sep 2021 to Aug 2023</p>
+          <p>Helped organize COVID-19 vaccination events, blood donation drives, and entrepreneurship programs. As Lead of Media, Design, and Relations (Sep 2022 to Aug 2023), I ran content, communications with sponsors and partners, and promotion for events.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Open to conversations about healthcare AI, LLM agents, and medical imaging. The fastest way to reach me is email.</p>
+      <div class="cta">
+        <a class="btn main" href="mailto:synvialfajrin@gmail.com">synvialfajrin@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/synvialfajrinelb">LinkedIn</a>
+        <a class="btn" href="https://github.com/synvialfajrine">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Synvi Alfajrine Loeba Bistomy. Based in Yogyakarta, Indonesia.</footer>
+</div>
+</body>
+</html>
